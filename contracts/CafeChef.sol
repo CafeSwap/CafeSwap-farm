@@ -7,7 +7,7 @@ import "@pancakeswap/pancake-swap-lib/contracts/token/BEP20/SafeBEP20.sol";
 import "@nomiclabs/buidler/console.sol";
 
 
-contract CafeChefDOT is Ownable {
+contract CafeChef is Ownable {
     using SafeMath for uint256;
     using SafeBEP20 for IBEP20;
 
@@ -47,8 +47,8 @@ contract CafeChefDOT is Ownable {
     uint256 public bonusEndBlock;
 
     // Fee calculations
-    uint constant public FEE = 10;
-    uint constant public MAX_FEE = 1000;
+    uint constant public FEE = 5;
+    uint constant public MAX_FEE = 10000;
 
     event Deposit(address indexed user, uint256 amount);
     event Withdraw(address indexed user, uint256 amount);
